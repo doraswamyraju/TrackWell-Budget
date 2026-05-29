@@ -2,6 +2,7 @@ plugins {
   alias(libs.plugins.android.application)
   alias(libs.plugins.compose.compiler)
   alias(libs.plugins.kotlin.serialization)
+  alias(libs.plugins.kapt)
 }
 
 android {
@@ -82,7 +83,7 @@ dependencies {
 
   // Room
   implementation(libs.room.runtime)
-  annotationProcessor(libs.room.compiler)
+  kapt(libs.room.compiler)
   implementation(libs.room.ktx)
 
   // ML Kit OCR
