@@ -168,7 +168,7 @@ fun ReminderScreen(
                             }
                             Row(verticalAlignment = Alignment.CenterVertically) {
                                 Text(
-                                    text = "$${String.format("%.2f", reminder.amount)}",
+                                    text = "₹${String.format("%.2f", reminder.amount)}",
                                     fontSize = 16.sp,
                                     fontWeight = FontWeight.Bold,
                                     color = NeonCyan
@@ -225,7 +225,7 @@ fun ReminderScreen(
                     OutlinedTextField(
                         value = inputAmount,
                         onValueChange = { inputAmount = it },
-                        label = { Text("Amount ($)", color = TextSecondaryDark) },
+                        label = { Text("Amount (₹)", color = TextSecondaryDark) },
                         colors = OutlinedTextFieldDefaults.colors(
                             focusedBorderColor = NeonCyan,
                             unfocusedBorderColor = CardDarkSecondary,

@@ -8,3 +8,6 @@ import kotlinx.serialization.Serializable
 @Serializable data object TransactionHistory : NavKey
 @Serializable data object BudgetPlanner : NavKey
 @Serializable data object ReminderList : NavKey
+@Serializable data object BackupSettings : NavKey
+@Serializable data object Login : NavKey
+@Serializable data object Subscriptions : NavKey

@@ -4,6 +4,7 @@ plugins {
   alias(libs.plugins.compose.compiler)
   alias(libs.plugins.kotlin.serialization)
   alias(libs.plugins.ksp)
+  alias(libs.plugins.google.services)
 }
 
 android {
@@ -27,6 +28,9 @@ android {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
+    kotlinOptions {
+        jvmTarget = "17"
+    }
     buildFeatures {
       compose = true
       aidl = false
@@ -37,6 +41,14 @@ android {
     packaging {
       resources {
         excludes += "/META-INF/{AL2.0,LGPL2.1}"
+        excludes += "META-INF/DEPENDENCIES"
+        excludes += "META-INF/LICENSE"
+        excludes += "META-INF/LICENSE.txt"
+        excludes += "META-INF/license.txt"
+        excludes += "META-INF/NOTICE"
+        excludes += "META-INF/NOTICE.txt"
+        excludes += "META-INF/notice.txt"
+        excludes += "META-INF/ASL2.0"
       }
     }
 }
@@ -97,4 +109,20 @@ dependencies {
 
   // WorkManager
   implementation(libs.work.runtime)
+
+  // Google Play Services Auth & Drive API
+  implementation(libs.play.services.auth)
+  implementation(libs.google.api.client.android) {
+    exclude(group = "org.apache.httpcomponents")
+  }
+  implementation(libs.google.api.services.drive) {
+    exclude(group = "org.apache.httpcomponents")
+  }
+  implementation(libs.google.http.client.gson)
+
+  // Firebase
+  implementation(platform(libs.firebase.bom))
+  implementation(libs.firebase.messaging)
+  implementation(libs.firebase.analytics)
 }
+

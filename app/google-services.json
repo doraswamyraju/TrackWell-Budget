@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "355296296656",
+    "project_id": "trackwell-68563",
+    "storage_bucket": "trackwell-68563.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:355296296656:android:a9aef4aac3720c04b8a8d5",
+        "android_client_info": {
+          "package_name": "com.example.trackwell"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "355296296656-os8j7bgf02f5qe7330kprp73hff0vout.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.trackwell",
+            "certificate_hash": "4b4fe71f573a8c75556920161d97cf4d449a6137"
+          }
+        },
+        {
+          "client_id": "355296296656-ngi00gsosjr1ttk2kiqgnbohq1e8mb3u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7wVnUFQBD9KRmCGjA_uJqyghddXlf0Mo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "355296296656-ngi00gsosjr1ttk2kiqgnbohq1e8mb3u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

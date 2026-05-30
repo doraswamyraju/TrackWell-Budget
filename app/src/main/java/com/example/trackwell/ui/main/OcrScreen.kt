@@ -293,7 +293,7 @@ fun OcrScreen(
                     OutlinedTextField(
                         value = extractedAmount.toString(),
                         onValueChange = { extractedAmount = it.toDoubleOrNull() ?: 0.0 },
-                        label = { Text("Amount ($)", color = TextSecondaryDark) },
+                        label = { Text("Amount (₹)", color = TextSecondaryDark) },
                         colors = OutlinedTextFieldDefaults.colors(
                             focusedBorderColor = NeonCyan,
                             unfocusedBorderColor = CardDarkSecondary,

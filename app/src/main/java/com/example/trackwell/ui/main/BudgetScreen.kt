@@ -151,7 +151,7 @@ fun BudgetScreen(
                             }
                             Row(verticalAlignment = Alignment.CenterVertically) {
                                 Text(
-                                    text = "$${String.format("%.2f", budget.limitAmount)}",
+                                    text = "₹${String.format("%.2f", budget.limitAmount)}",
                                     fontSize = 20.sp,
                                     fontWeight = FontWeight.Bold,
                                     color = TextPrimaryDark
@@ -207,7 +207,7 @@ fun BudgetScreen(
                     OutlinedTextField(
                         value = inputLimit,
                         onValueChange = { inputLimit = it },
-                        label = { Text("Limit Amount ($)", color = TextSecondaryDark) },
+                        label = { Text("Limit Amount (₹)", color = TextSecondaryDark) },
                         colors = OutlinedTextFieldDefaults.colors(
                             focusedBorderColor = NeonCyan,
                             unfocusedBorderColor = CardDarkSecondary,

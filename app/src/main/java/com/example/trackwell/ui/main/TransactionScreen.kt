@@ -195,7 +195,7 @@ fun TransactionScreen(
                                     )
                                 }
                                 Text(
-                                    text = "${if (transaction.type == "EXPENSE") "-" else "+"}$${String.format("%.2f", transaction.amount)}",
+                                    text = "${if (transaction.type == "EXPENSE") "-" else "+"}₹${String.format("%.2f", transaction.amount)}",
                                     fontSize = 16.sp,
                                     fontWeight = FontWeight.Bold,
                                     color = if (transaction.type == "EXPENSE") SunsetOrange else EmeraldGreen
@@ -231,7 +231,7 @@ fun TransactionScreen(
                                 ) {
                                     Text("Type: ${transaction.type}", color = TextPrimaryDark, fontWeight = FontWeight.Bold)
                                     Spacer(modifier = Modifier.height(8.dp))
-                                    Text("Amount: $${String.format("%.2f", transaction.amount)}", color = TextPrimaryDark)
+                                    Text("Amount: ₹${String.format("%.2f", transaction.amount)}", color = TextPrimaryDark)
                                     Spacer(modifier = Modifier.height(8.dp))
                                     Text("Note: ${transaction.note}", color = TextSecondaryDark)
                                     Spacer(modifier = Modifier.height(16.dp))
@@ -303,7 +303,7 @@ fun TransactionScreen(
                     OutlinedTextField(
                         value = inputAmount,
                         onValueChange = { inputAmount = it },
-                        label = { Text("Amount ($)", color = TextSecondaryDark) },
+                        label = { Text("Amount (₹)", color = TextSecondaryDark) },
                         colors = OutlinedTextFieldDefaults.colors(
                             focusedBorderColor = NeonCyan,
                             unfocusedBorderColor = CardDarkSecondary,

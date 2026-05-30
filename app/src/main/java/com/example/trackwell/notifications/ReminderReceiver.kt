@@ -49,7 +49,7 @@ class ReminderReceiver : BroadcastReceiver() {
         val notification = NotificationCompat.Builder(context, channelId)
             .setSmallIcon(android.R.drawable.ic_lock_idle_alarm)
             .setContentTitle(title)
-            .setContentText("Payment of $${String.format("%.2f", amount)} for $category is due now!")
+            .setContentText("Payment of ₹${String.format("%.2f", amount)} for $category is due now!")
             .setPriority(NotificationCompat.PRIORITY_HIGH)
             .setContentIntent(pendingIntent)
             .setAutoCancel(true)
